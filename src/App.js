@@ -1,6 +1,6 @@
 import React from 'react'
-import Login from './pages/Login'
+import Authentication from './pages/Authentication'
 
-export default function ProTip() {
-  return <Login />
+export default function App() {
+  return <Authentication />
 }

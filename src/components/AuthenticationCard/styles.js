@@ -4,6 +4,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     paddingLeft: theme.spacing(6),
     paddingRight: theme.spacing(6),
+    paddingTop: theme.spacing(3),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-evenly',

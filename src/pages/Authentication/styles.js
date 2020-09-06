@@ -14,8 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   formContainer: {
     width: '30vw',
-    height: '50vh',
-    minHeight: '406px',
+    minHeight: '50vh',
     [theme.breakpoints.down('sm')]: {
       width: '95vw',
       maxWidth: '30rem',

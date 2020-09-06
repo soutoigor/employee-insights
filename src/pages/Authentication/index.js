@@ -1,13 +1,13 @@
 import React from 'react'
 import {
   Grid,
-  Typography,
   Hidden,
+  Typography,
 } from '@material-ui/core'
 import logo from '../../assets/logo.svg'
 import Watermark from '../../components/Watermark'
 import BlueCard from '../../components/BlueCard'
-import LoginForm from '../../components/LoginForm'
+import AuthenticationCard from '../../components/AuthenticationCard'
 import useStyles from './styles'
 
 const Login = () => {
@@ -27,7 +27,7 @@ const Login = () => {
       </Grid>
       <Grid container item alignItems="center" justify="center" md={6}>
         <Grid>
-          <LoginForm customClass={classes.formContainer} />
+          <AuthenticationCard customClass={classes.formContainer} />
         </Grid>
       </Grid>
       <Hidden mdUp>

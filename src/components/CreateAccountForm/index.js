@@ -7,6 +7,14 @@ const LoginForm = () => {
     <>
       <FormControl margin="normal">
         <TextField
+          label="Nome"
+          type="text"
+          variant="outlined"
+          size="small"
+        />
+      </FormControl>
+      <FormControl margin="normal">
+        <TextField
           label="E-mail"
           type="email"
           variant="outlined"
@@ -17,8 +25,11 @@ const LoginForm = () => {
         <PasswordField label="Senha" />
       </FormControl>
       <FormControl margin="normal">
+        <PasswordField label="Confirmar senha" />
+      </FormControl>
+      <FormControl margin="normal">
         <Button variant="contained" color="primary" disableElevation>
-          Entrar
+          Cadastrar
         </Button>
       </FormControl>
     </>
