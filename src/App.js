@@ -1,18 +1,14 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { ThemeProvider } from '@material-ui/core/styles'
+import theme from './theme'
+import AppRouter from './router'
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: theme.spacing(6, 0, 3),
-  },
-}))
-
-export default function ProTip() {
-  const classes = useStyles()
+export default function App() {
   return (
-    <Typography className={classes.root} color="textPrimary">
-      Hello World
-    </Typography>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppRouter />
+    </ThemeProvider>
   )
 }

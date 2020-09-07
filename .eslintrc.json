@@ -20,6 +20,7 @@
         "import"
     ],
     "rules": {
+        "react/jsx-props-no-spreading": 0,
         "semi": [2, "never"],
         "global-require": "off",
         "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
