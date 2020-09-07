@@ -5,11 +5,23 @@ import {
   InputAdornment,
   InputLabel,
   OutlinedInput,
+  FormHelperText,
 } from '@material-ui/core'
 import Visibility from '@material-ui/icons/Visibility'
 import VisibilityOff from '@material-ui/icons/VisibilityOff'
+import useStyles from './styles'
 
-const PasswordField = ({ label, value, onChange }) => {
+const PasswordField = (props) => {
+  const classes = useStyles()
+  const {
+    disabled,
+    error,
+    helperText,
+    label,
+    onBlur,
+    onChange,
+    value,
+  } = props
   const [showPassword, setShowPassword] = useState(false)
 
   const toggleShowPassword = () => {
@@ -22,7 +34,12 @@ const PasswordField = ({ label, value, onChange }) => {
 
   return (
     <>
-      <InputLabel margin="dense" variant="outlined" htmlFor={label}>
+      <InputLabel
+        margin="dense"
+        variant="outlined"
+        htmlFor={label}
+        className={error ? classes.errorLabel : ''}
+      >
         {label}
       </InputLabel>
       <OutlinedInput
@@ -31,6 +48,9 @@ const PasswordField = ({ label, value, onChange }) => {
         type={showPassword ? 'text' : 'password'}
         margin="dense"
         value={value}
+        onBlur={onBlur}
+        error={error}
+        disabled={disabled}
         onChange={onChange}
         endAdornment={(
           <InputAdornment position="end">
@@ -44,14 +64,30 @@ const PasswordField = ({ label, value, onChange }) => {
           </InputAdornment>
         )}
       />
+      <FormHelperText
+        className={classes.errorMessage}
+      >
+        {helperText}
+      </FormHelperText>
     </>
   )
+}
+
+PasswordField.defaultProps = {
+  error: '',
+  onBlur: () => {},
+  disabled: false,
+  helperText: '',
 }
 
 PasswordField.propTypes = {
   label: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
+  error: PropTypes.bool,
+  onBlur: PropTypes.func,
+  disabled: PropTypes.bool,
+  helperText: PropTypes.string,
 }
 
 export default PasswordField

@@ -13,6 +13,14 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: theme.spacing(2),
     },
   },
+  cardTitle: {
+    textAlign: 'center',
+    fontSize: theme.typography.h3.fontSize,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '2.3rem',
+      fontWeight: 500,
+    },
+  },
 }))
 
 export default useStyles

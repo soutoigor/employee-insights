@@ -43,7 +43,7 @@ const AuthenticationCard = ({ customClass }) => {
 
   return (
     <Card className={`${classes.card} ${customClass}`} elevation={8}>
-      <Typography variant="h3" component="h3" align="center">
+      <Typography className={classes.cardTitle} component="h3">
         {
           isCreateAccount
             ? 'Cadastre-se'
