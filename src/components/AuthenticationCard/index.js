@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   Button,
   Card,
@@ -7,61 +7,64 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core'
+import { equals } from 'ramda'
+import { useLocation, useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import LoginForm from '../LoginForm'
 import CreateAccountForm from '../CreateAccountForm'
 import useStyles from './styles'
 
-const ManageCardAction = (isCreateAccount) => (
-  isCreateAccount
-    ? (
-      <>
-        <Typography variant="body2" align="center">
-          Já possui conta?
-        </Typography>
-        <Button size="large" color="primary">
-          Fazer login
-        </Button>
-      </>
-    )
-    : (
-      <>
-        <Typography variant="body2" align="center">
-          Não possui uma conta?
-        </Typography>
-        <Button size="large" color="primary">
-          Cadastre-se
-        </Button>
-      </>
-    )
-)
-
 const AuthenticationCard = ({ customClass }) => {
   const classes = useStyles()
+  const location = useLocation()
+  const history = useHistory()
 
-  const isCreateAccount = true
+  const [cardValues, setCardValues] = useState({})
+
+  useEffect(() => {
+    const isCreateAccount = equals(location.pathname, '/create-account')
+    const values = isCreateAccount
+      ? {
+        title: 'Cadastre-se!',
+        form: <CreateAccountForm />,
+        buttonSubtitle: 'Já possui conta?',
+        button: 'Fazer login',
+        link: '/login',
+      }
+      : {
+        title: 'Bem-vindo!',
+        form: <LoginForm />,
+        buttonSubtitle: 'Não possui uma conta?',
+        button: 'Cadastre-se',
+        link: '/create-account',
+      }
+    setCardValues(values)
+  }, [location.pathname])
+
+  const redirectTo = (route) => history.push(route)
 
   return (
     <Card className={`${classes.card} ${customClass}`} elevation={8}>
       <Typography className={classes.cardTitle} component="h3">
-        {
-          isCreateAccount
-            ? 'Cadastre-se'
-            : 'Bem-vindo!'
-        }
+        {cardValues.title}
       </Typography>
       <CardContent>
         <Grid container direction="column" alignItems="stretch">
-          {
-            isCreateAccount
-              ? <CreateAccountForm />
-              : <LoginForm />
-          }
+          {cardValues.form}
         </Grid>
       </CardContent>
       <CardActions>
         <Grid container direction="column" justify="center" alignItems="stretch">
-          <ManageCardAction isCreateAccount={isCreateAccount} />
+          <Typography variant="body2" align="center">
+            {cardValues.buttonSubtitle}
+          </Typography>
+          <Button
+            onClick={() => redirectTo(cardValues.link)}
+            size="large"
+            color="primary"
+          >
+            {cardValues.button}
+          </Button>
         </Grid>
       </CardActions>
     </Card>
