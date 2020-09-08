@@ -25,6 +25,8 @@
         "global-require": "off",
         "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
         "import/prefer-default-export": "off",
-        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+        "template-curly-spacing" : "off",
+        "indent" : "off"
     }
 }

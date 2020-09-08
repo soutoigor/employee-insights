@@ -3,12 +3,12 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyARTgMJi0OMx13UJFt2C63uqqfN3e3wlAo',
-  authDomain: 'kpi-db.firebaseapp.com',
-  databaseURL: 'https://kpi-db.firebaseio.com',
-  projectId: 'kpi-db',
-  appId: '1:279186183623:web:01ccc516130b0ec64775e2',
-  measurementId: 'G-3GQ8GQX5X0',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 }
 
 firebase.initializeApp(firebaseConfig)
