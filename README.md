@@ -1,68 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Key People Insights
+The **Key People Insights** is a platform where employees can answer questionaries about their jobs and how they are feeling.  
+And with the dashboards, the managers and thr HR people can make better decisions.
 
-## Available Scripts
+## Screenshots
+> Login  
+![Login](https://i.ibb.co/yPgwSgV/desktop.png)
 
-In the project directory, you can run:
+> Home  
+![Home](https://i.ibb.co/4TTVYv3/home.png)  
 
-### `npm start`
+> Questionary  
+![Questionary](https://i.ibb.co/FWNc0cy/KPIs.gif)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Dashboards  
+![Dashboards](https://i.ibb.co/X4nzj3C/KPIs-1.gif)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Setup
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Clone the Repository  
+```git clone git@github.com:soutoigor/kpi-test.git```  
+2. Install dependencies  
+```npm install```
+3. Create a project in Firebase with the "Authentication with email and password" on and create a database.  
+4. Create a `.env` file according with the `.env.example` file (the firebase project values).
+5. Run the project  
+```npm run start```
+6. To verify the linter  
+```npm run lint```
+7. Fix some lint errors  
+```npm run lint:fix```
