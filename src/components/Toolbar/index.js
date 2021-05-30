@@ -25,7 +25,7 @@ import {
   Settings,
   ExitToApp,
 } from '@material-ui/icons'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import useStyles from './styles'
 import { auth } from '../../lib/firebase'
 import { AuthContext } from '../../contexts/Auth'
@@ -120,7 +120,7 @@ const MiniDrawer = () => {
           <Box className={classes.appBarLogo}>
             <img src={logo} alt="KPI logo" className={classes.logoImage} />
             <Typography variant="h5" noWrap className={classes.logoTitle}>
-              Key People Insights
+              Employee Insights
             </Typography>
           </Box>
           <Typography noWrap className={classes.userName}>

@@ -1,28 +1,28 @@
-# Key People Insights
-The **Key People Insights** is a platform where employees can answer questionaries about their jobs and how they are feeling.  
+# Employee Insights
+The **Employee Insights** is a platform where employees can answer questionaries about their jobs and how they are feeling.
 And with the dashboards, the managers and thr HR people can make better decisions.
 
 ## Screenshots
-> Login  
+> Login
 ![Login](https://i.ibb.co/yPgwSgV/desktop.png)
 
-> Home  
-![Home](https://i.ibb.co/4TTVYv3/home.png)  
+> Home
+![Home](https://i.ibb.co/4TTVYv3/home.png)
 
-> Questionary  
+> Questionary
 ![Questionary](https://i.ibb.co/FWNc0cy/KPIs.gif)
 
-> Dashboards  
+> Dashboards
 ![Dashboards](https://i.ibb.co/X4nzj3C/KPIs-1.gif)
 
 ### Setup
 
-1. Clone the Repository  
-```git clone git@github.com:soutoigor/kpi-test.git```  
-2. Install dependencies  
+1. Clone the Repository
+```git clone git@github.com:soutoigor/kpi-test.git```
+2. Install dependencies
 ```npm install```
-3. Create a project in Firebase with the "Authentication with email and password" on and create a Cloud Firestore DB.  
-4.  Create the following collections and documents: 
+3. Create a project in Firebase with the "Authentication with email and password" on and create a Cloud Firestore DB.
+4.  Create the following collections and documents:
 ```JSON
  "{
   "questionaries": {
@@ -43,9 +43,9 @@ And with the dashboards, the managers and thr HR people can make better decision
 }"
 ```
 5. Create a `.env` file according with the `.env.example` file (the firebase project values).
-6. Run the project  
+6. Run the project
 ```npm run start```
-7. To verify the linter  
+7. To verify the linter
 ```npm run lint```
-8. Fix some lint errors  
+8. Fix some lint errors
 ```npm run lint:fix```

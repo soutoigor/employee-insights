@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@material-ui/core'
 import { Redirect } from 'react-router-dom'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 import Watermark from '../../components/Watermark'
 import BlueCard from '../../components/BlueCard'
 import AuthenticationCard from '../../components/AuthenticationCard'
@@ -26,7 +26,7 @@ const Authentication = () => {
         </Grid>
         <Grid item>
           <Typography variant="h1" component="h1" className={classes.titleText}>
-            Key People Insights
+            Employee Insights
           </Typography>
         </Grid>
       </Grid>
