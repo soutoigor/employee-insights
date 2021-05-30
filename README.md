@@ -1,19 +1,15 @@
+<img src="https://user-images.githubusercontent.com/22479477/120116783-206d7e80-c160-11eb-9ad6-2586a9323b7c.png" alt="logo" width="100">
+
+
 # Employee Insights
 The **Employee Insights** is a platform where employees can answer questionaries about their jobs and how they are feeling.
-And with the dashboards, the managers and thr HR people can make better decisions.
+And with the dashboards, the managers and the HR people can make better decisions.
+The questionaries are all dynamic, so whenever a new questionary is created, it will appear for the employees.
 
-## Screenshots
-> Login
-![Login](https://i.ibb.co/yPgwSgV/desktop.png)
+## Example
+https://user-images.githubusercontent.com/22479477/120116754-0a5fbe00-c160-11eb-95ae-e54133f59a42.mp4
 
-> Home
-![Home](https://i.ibb.co/4TTVYv3/home.png)
 
-> Questionary
-![Questionary](https://i.ibb.co/FWNc0cy/KPIs.gif)
-
-> Dashboards
-![Dashboards](https://i.ibb.co/X4nzj3C/KPIs-1.gif)
 
 ### Setup
 
